@@ -1,0 +1,46 @@
+{
+  "name": "strategy-cli",
+  "version": "0.1.0",
+  "description": "cli to run strategy",
+  "main": "./lib/index.js",
+  "bin": {
+    "strategy-cli": "./lib/cli.js"
+  },
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --declaration",
+    "prepublish": "npm run build",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/minimist": "^1.2.0",
+    "@types/mongodb": "^3.1.21",
+    "@types/node": "^11.10.5",
+    "@types/ramda": "^0.25.51",
+    "minimist": "^1.2.0",
+    "mongodb": "^3.1.13",
+    "ramda": "^0.26.1",
+    "strategy-runner": "file:../strategy-runner",
+    "technical-indicator": "^0.4.1"
+  },
+  "peerDependencies": {},
+  "author": "Yulong Ruan <ruanyu1@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenQuantJS/strategy-cli.git"
+  },
+  "homepage": "https://github.com/OpenQuantJS/strategy-cli",
+  "bugs": "https://github.com/OpenQuantJS/strategy-cli/issues"
+}
